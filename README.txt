@@ -1,4 +1,4 @@
-This project implements a Python emulator of NeuroMem's CM1K neuromorphic chip. It should, in theory, produce nearly identical internal models (neural networks) and subsequent predictions to those of the hardware chip itself. However, I do not yet personally have access to a CM1K chip and so cannot make such a comparison.
+This project implements a Python emulator of General Vision's CM1K neuromorphic chip. It should, in theory, produce nearly identical internal models (neural networks) and subsequent predictions to those of the hardware chip itself. However, I do not yet personally have access to a CM1K chip and so cannot make such a comparison.
 
 The emulator currently includes drivers for four popular public datasets, described below. It should be possible to extrapolate these drivers to support other datasets. Note that the drivers are not designed toward creating a tool for using the emulator for real world modeling and prediction, but rather are designed for running experiments on the CM1K's modeling performance relative to various settings and gathering the results into text dumps that can be (somewhat) easily moved to a spreadsheet.
 
