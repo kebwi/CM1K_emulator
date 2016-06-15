@@ -2,21 +2,26 @@ This project implements a Python emulator of General Vision's CM1K neuromorphic 
 
 The emulator currently includes drivers for four popular public datasets, described below. It should be possible to extrapolate these drivers to support other datasets. Note that the drivers are not designed toward creating a tool for using the emulator for real world modeling and prediction, but rather are designed for running experiments on the CM1K's modeling performance relative to various settings and gathering the results into text dumps that can be (somewhat) easily moved to a spreadsheet.
 
-The main driver is test.py. It contains __main__, main(), and runners for the four public datasets that are currently supported. It also holds the unit tests, such as they are.
+The following file is the driver:
+- test.py
+It contains __main__, main(), and runners for the four public datasets that are currently supported. It also holds the unit tests, such as they are.
 
 The following four files encapsulate reading four popular public datasets:
 - mnist.py
 - att_db_of_faces.py
 - iris.py
 - mushroom.py
-The top of each file provides information about its dataset, including where you can download them. The datasets are not bundled with this project. After you download them, you will have to configure the paths to the datasets on your local filesystem so the runners (see above) can find them. These paths are specified in module-level variables at the top of each of the four files.
+The top of each file provides information about its dataset, including where you can download them. The datasets are not bundled with this project. After you download them, you will have to configure the paths to the datasets on your local filesystem so the runners (see test.py above) can find them. These paths are specified in module-level variables at the top of test.py.
 
 The following two files represent the CM1K emulator:
 - cm1k_emulator.py
 - neuron.py
 The emulator can be used in loosely two ways, low level emulation and high level emulation. Low level emulation attempts to replicate the chip's own internal behavior at a very precise granularity. For example, it processes individual bytes of the input pattern one by one, broadcasting those bytes to the neurons and allowing the neurons to incrementally update their internally maintained distance metrics one input byte at a time. This is how the real CM1K chip works, each neuron steadily updating its distance as each new input byte is received. There are other examples of low-level behavior too. The high level approach should be much more efficient (faster) without altering the modeling or prediction results. For example, when presenting an input pattern to the neurons, it doesn't iterate over the bytes of the input one by one, but rather passes the input array whole-parcel to the neurons, which then calculate the total pattern distance (i.e., pattern-to-pattern difference) in one step.
 
-20160611
+Please also check out the following slide presentation that discusses neuromorphic computing with an emphasis on the CM1K and this emulator, along with detailed experimental results:
+http://keithwiley.com/Downloads/KeithWiley_NeuromorphicComputing_and_CM1K_and_emulator.pdf
+
+20160614
 Keith Wiley
 kwiley@keithwiley.com
 http://keithwiley.com
