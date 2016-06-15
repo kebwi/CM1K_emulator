@@ -1,4 +1,8 @@
 """
+Keith Wiley
+kwiley@keithwiley.com
+http://keithwiley.com
+
 https://archive.ics.uci.edu/ml/datasets/Mushroom
 """
 

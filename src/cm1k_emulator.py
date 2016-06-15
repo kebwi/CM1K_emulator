@@ -1,9 +1,8 @@
-from enum import Enum
-from collections import OrderedDict
-import log
-import neuron as nrn
-
 """
+Keith Wiley
+kwiley@keithwiley.com
+http://keithwiley.com
+
 The primary reference used to create this emulator was:
 CM1K Hardware User's Manual
 by General Vision
@@ -11,6 +10,11 @@ http://general-vision.com/documentation/
 Although I designed the emulator using v3.4.8 of the manual, General Vision released an updated version during my work.
 Consequently, I have updated the various page references in this file to reflect v4.0.2 of the manual.
 """
+
+from enum import Enum
+from collections import OrderedDict
+import log
+import neuron as nrn
 
 
 class CM1KMode(Enum):

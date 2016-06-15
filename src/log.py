@@ -1,3 +1,9 @@
+"""
+Keith Wiley
+kwiley@keithwiley.com
+http://keithwiley.com
+"""
+
 logging_enabled = False
 trace_enabled = False
 warning_enabled = True

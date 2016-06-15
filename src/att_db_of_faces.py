@@ -1,9 +1,13 @@
-from collections import defaultdict
-import image_procs as img_p
-
 """
+Keith Wiley
+kwiley@keithwiley.com
+http://keithwiley.com
+
 http://www.cl.cam.ac.uk/research/dtg/attarchive/facedatabase.html
 """
+
+from collections import defaultdict
+import image_procs as img_p
 
 
 def read_att_db_of_faces(data_dir, invert_images=False, print_images=False):

@@ -1,3 +1,9 @@
+"""
+Keith Wiley
+kwiley@keithwiley.com
+http://keithwiley.com
+"""
+
 from enum import Enum
 import math as math
 import log

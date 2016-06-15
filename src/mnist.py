@@ -1,9 +1,13 @@
-import struct
-from image_procs import *
-
 """
+Keith Wiley
+kwiley@keithwiley.com
+http://keithwiley.com
+
 http://yann.lecun.com/exdb/mnist
 """
+
+import struct
+from image_procs import *
 
 
 def read_mnist(data_dir, train_test, num_images_to_retrieve=None, first_image_to_retrieve=0, invert_images=False,

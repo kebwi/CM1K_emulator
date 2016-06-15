@@ -1,8 +1,12 @@
-from collections import defaultdict
-
 """
+Keith Wiley
+kwiley@keithwiley.com
+http://keithwiley.com
+
 http:https://archive.ics.uci.edu/ml/datasets/Iris
 """
+
+from collections import defaultdict
 
 
 def read_iris(data_dir):

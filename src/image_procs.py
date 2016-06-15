@@ -1,3 +1,9 @@
+"""
+Keith Wiley
+kwiley@keithwiley.com
+http://keithwiley.com
+"""
+
 import math as math
 
 
